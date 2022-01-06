@@ -1,0 +1,27 @@
+---
+name: workflow_ci
+
+on:
+  workflow_call:
+
+jobs:
+  yamllint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install yamllint==1.26.3
+      - run: yamllint .
+  actionlint:
+    runs-on: ubuntu-latest
+    container:
+      image: rhysd/actionlint:1.6.8
+      options: --user root
+    steps:
+      - uses: actions/checkout@v2
+      - name: run-actionlint
+        run: |
+          mkdir .git
+          actionlint -color

@@ -1,0 +1,15 @@
+---
+extends: default
+
+rules:
+  comments:
+    level: error
+  comments-indentation:
+    level: error
+  document-start:
+    level: error
+  line-length:
+    max: 125
+  truthy:
+    check-keys: false
+    level: error
