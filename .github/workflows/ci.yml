@@ -17,4 +17,4 @@ jobs:
   #   secrets:
   #     github-access-token: ${{ secrets.DEVOPS_GITHUB_MACHINE_PAT }}
   workflow-ci:
-    uses: vergesense/gha-workflow-ci/.github/workflows/workflow_ci.yml@v1
+    uses: vergesense/gha-workflow-ci/.github/workflows/workflow_ci.yml@v1.0.0
