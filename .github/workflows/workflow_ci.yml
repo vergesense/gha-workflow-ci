@@ -5,6 +5,7 @@ on:
   workflow_call:
     inputs:
       actionlint-ignore:
+        description: Add an ignore statement to the actionlint command
         required: false
         type: string
 
