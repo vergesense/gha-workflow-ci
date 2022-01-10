@@ -1,7 +1,7 @@
 # gha-workflow-ci
 CI for github-actions workflow files.
 
-# Tools in workflow
+# Tools used in workflow
 - [yamllint](https://github.com/adrienverge/yamllint)
 - [actionlint](https://github.com/rhysd/actionlint)
 
