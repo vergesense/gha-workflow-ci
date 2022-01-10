@@ -3,9 +3,10 @@ name: workflow_ci
 
 on:
   workflow_call:
-    actionlint-ignore:
-    required: true
-    type: string
+    inputs:
+      actionlint-ignore:
+        required: false
+        type: string
 
 jobs:
   yamllint:
