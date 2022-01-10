@@ -3,6 +3,11 @@ name: workflow_ci
 
 on:
   workflow_call:
+    inputs:
+      actionlint-ignore:
+        description: Add an ignore statement to the actionlint command
+        required: false
+        type: string
 
 jobs:
   yamllint:
@@ -24,4 +29,4 @@ jobs:
       - name: run-actionlint
         run: |
           mkdir .git
-          actionlint -color
+          actionlint -color ${{ inputs.actionlint-ignore }}
