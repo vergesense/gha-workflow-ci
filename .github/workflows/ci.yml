@@ -8,13 +8,5 @@ on:
       - main
 
 jobs:
-  # check-workflow-version:
-  #   uses: vergesense/gha-check-workflow-versions/.github/workflows/check_workflow_versions.yml@
-  #   with:
-  #     repo-name: 'gha-workflow-ci'
-  #     reusable-workflow-job-id: workflow-ci
-  #     gha-workflow-file-name: ci.yml
-  #   secrets:
-  #     github-access-token: ${{ secrets.DEVOPS_GITHUB_MACHINE_PAT }}
   workflow-ci:
     uses: vergesense/gha-workflow-ci/.github/workflows/workflow_ci.yml@v1

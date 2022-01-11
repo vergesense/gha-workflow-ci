@@ -1,0 +1,17 @@
+---
+name: workflow_version_check
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+
+jobs:
+  check-workflow-version:
+    uses: vergesense/gha-check-workflow-versions/.github/workflows/check_workflow_versions.yml@v1
+    with:
+      gha-workflow-file-name: ci.yml
+  check-workflow-version2:
+    uses: vergesense/gha-check-workflow-versions/.github/workflows/check_workflow_versions.yml@v1
+    with:
+      gha-workflow-file-name: workflow_version_check.yml
