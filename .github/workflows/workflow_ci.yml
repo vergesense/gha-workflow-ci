@@ -22,7 +22,7 @@ jobs:
   actionlint:
     runs-on: ubuntu-latest
     container:
-      image: rhysd/actionlint:1.6.8
+      image: rhysd/actionlint:1.6.12
       options: --user root
     steps:
       - uses: actions/checkout@v2
